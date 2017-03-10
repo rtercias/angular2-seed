@@ -1,7 +1,7 @@
 {
-  "name": "angular2-seed",
+  "name": "weather-today",
   "version": "1.0.0",
-  "description": "A simple starter Angular2 project",
+  "description": "Weather Today",
   "scripts": {
     "build": "webpack --progress",
     "watch": "npm run build -- --watch",
@@ -9,8 +9,7 @@
     "start": "npm run server"
   },
   "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
+    "Ryan Tercias <ryan.tercias@gmail.com>"
   ],
   "license": "MIT",
   "dependencies": {
@@ -25,6 +24,8 @@
     "@angular/platform-server": "~2.2.1",
     "@angular/router": "~3.2.1",
     "@angular/upgrade": "~2.2.1",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.20",
+    "@types/lodash": "^4.14.54",
     "angular2-in-memory-web-api": "0.0.21",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
@@ -45,19 +46,5 @@
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.11",
     "webpack-merge": "^0.15.0"
-  },
-  "keywords": [
-    "Angular2",
-    "angular2-seed",
-    "official angular 2 seed",
-    "official angular2 seed"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angular/angular2-seed.git"
-  },
-  "bugs": {
-    "url": "https://github.com/angular/angular2-seed/issues"
-  },
-  "homepage": "https://github.com/angular/angular2-seed#readme"
+  }
 }

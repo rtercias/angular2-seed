@@ -1,2 +1,17 @@
-<h3>Home Component</h3>
-<p>Welcome to Angular Seed</p>
+<h1 class="title">Today's Weather</h1>
+<div class="container">
+    <ul class="cities">
+        <li class="city col-md-4" *ngFor="let city of cities">            
+            <div class="city-container">
+                <h2 class="city-name">{{city.name}}</h2>
+                <h3 class="city-temp">{{city.measurement.temp}}&deg;</h3>
+                <ul>
+                    <li class="weather" *ngFor="let w of city.weather">
+                        <img class="weather-icon" src="http://openweathermap.org/img/w/{{w.icon}}.png" />
+                        <span clas="weather-desc">{{w.description}}</span>
+                    </li>
+                </ul>
+            </div>        
+        </li>
+    </ul>
+</div>
