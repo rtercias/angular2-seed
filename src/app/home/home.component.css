@@ -2,23 +2,69 @@
   text-align: center;
 }
 .container {
-  margin-top: 50px;
+  margin: 50px auto 50px auto;
 }
 ul {
   list-style-type: none;
   padding: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .city-container {
-  border: solid 2px;
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
+  border: solid 3px;
+  height: auto;
+  width: 300px;
+  border-radius: 10px;
   text-align: center;
-  margin: auto;
+  margin: auto;  
+}
+.city {
+  display: inline-block;
+  margin: 20px;
+}
+.city-temp {
+  padding: 7px 0 7px 0;
 }
 .weather {
   list-style-type: none;
 }
 .weather-icon {
   vertical-align: middle;
+  width: 40%;
+}
+.weather-desc {
+  display: block;
+}
+.svg {
+  width: 40px;  
+  height: 40px;
+  display: inline-block;
+  transform: rotate(-20deg);  
+}
+.svg-01d {
+  background: url('http://localhost:3000/app/images/003-sun.svg') no-repeat;
+}
+.svg-01n {
+  background: url('http://localhost:3000/app/images/005-half-moon.svg') no-repeat;
+}
+.svg-02d, .svg-02n, .svg-03d, .svg-03n {
+  background: url('http://localhost:3000/app/images/007-cloud-outline.svg') no-repeat;
+}
+.svg-04d {
+  background: url('http://localhost:3000/app/images/001-umbrella-1.svg') no-repeat;
+}
+.svg-04n {
+  background: url('http://localhost:3000/app/images/001-umbrella-1.svg') no-repeat;
+}
+.svg-09d, .svg-o9n, .svg-10d, .svg-10n {
+  background: url('http://localhost:3000/app/images/006-umbrella.svg') no-repeat;
+}
+.svg-11d, .svg-11n {
+  background: url('http://localhost:3000/app/images/004-flash.svg') no-repeat;
+}
+.svg-13d, .svg-13n {
+  background: url('http://localhost:3000/app/images/008-snowflake.svg') no-repeat;
+}
+.svg-50d, .svg-50n {
+  background: url('http://localhost:3000/app/images/002-sea-waves.svg') no-repeat;
 }

@@ -9,22 +9,16 @@ import City from './../entities/city';
 @Injectable()
 export default class WeatherService {
   private appId = 'cab4e299abff5d6eeadd8dd9492408cf';
-  private units = 'english';
+  private units = 'imperial';
+  private corsPrefix = 'https://cors-anywhere.herokuapp.com/';
+
   constructor (private http: Http) {}
 
   public load(cityIds: number[]) {
     const oneHour = 30*1000;
-    const cityIdString =cityIds.join(',');     
-
-    // TODO: replace with OpenWeatherMap url when service is working properly.
-    // Currently, the free version of the API does not appear to be working, 
-    // and my registered APPID is being rejected.
-    // const url = `http://samples.openweathermap.org/data/2.5/group?id=${cityIdString}&units=${this.units}&APPID=${this.appId}`;
-
-    // As a work-around, I captured the sample json data from OpenWeatherMap
-    // and stored it in a local file, replacing the three sample city names
-    // with those required in the instruction.
-    const url = './app/services/weather.json';
+    const cityIdString =cityIds.join(',');
+    const serviceUrl = 'http://api.openweathermap.org/data/2.5/group';
+    const url = `${serviceUrl}?id=${cityIdString}&units=${this.units}&APPID=${this.appId}`;
     
     if (this.isCacheExpired()) {
       console.log('Getting data from API');

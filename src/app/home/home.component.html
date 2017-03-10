@@ -1,14 +1,16 @@
 <h1 class="title">Today's Weather</h1>
-<div class="container">
+<div class="container row">
     <ul class="cities">
-        <li class="city col-md-4" *ngFor="let city of cities">            
+        <li class="city" *ngFor="let city of cities">            
             <div class="city-container">
                 <h2 class="city-name">{{city.name}}</h2>
-                <h3 class="city-temp">{{city.measurement.temp}}&deg;</h3>
+                <h3 class="city-temp bg-primary">{{city.measurement.temp}}&deg;</h3>
                 <ul>
-                    <li class="weather" *ngFor="let w of city.weather">
+                    <li class="weather" *ngFor="let w of city.weather">                        
                         <img class="weather-icon" src="http://openweathermap.org/img/w/{{w.icon}}.png" />
-                        <span clas="weather-desc">{{w.description}}</span>
+                        <h3 class="weather-desc">{{w.description}}
+                            <i class="svg svg-{{w.icon}}"></i>
+                        </h3>
                     </li>
                 </ul>
             </div>        
