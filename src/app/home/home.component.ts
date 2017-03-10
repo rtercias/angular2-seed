@@ -11,6 +11,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent {
   public cities: City[];
+  public source: string;
+  private timeout = null;
+
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit() {
@@ -20,9 +23,17 @@ export class HomeComponent {
       5128638   //New York 
     ];
 
-    this.weatherService.load(ids).then((cities) => {
+    this.weatherService.load(ids).then((cities) => {      
       this.cities = cities;
+      clearTimeout(this.timeout);
     });
+
+    this.source = this.weatherService.getCacheFlag();
+
+    this.timeout = setTimeout(() => {
+      this.source = this.weatherService.getCacheFlag();
+      clearTimeout(this.timeout);
+    }, 30000);    
   }
 
 }
