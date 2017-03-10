@@ -1,6 +1,6 @@
 ## weather
 
-A simple app showing the current weather in Beijing, Brussels, and New York.
+A simple app showing the current weather in three different cities.
 
 
 ### Usage
