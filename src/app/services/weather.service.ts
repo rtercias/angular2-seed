@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 import City from './../entities/city';
 
 const msgAPI = 'Data from API';
-const msgCache = 'Data from cache';
+const msgCache = 'Data from cache (30 sec)';
 
 @Injectable()
 export default class WeatherService {
@@ -24,7 +24,7 @@ export default class WeatherService {
     const url = `${serviceUrl}?id=${cityIdString}&units=${this.units}&APPID=${this.appId}`;
     
     if (this.isCacheExpired()) {     
-       
+
       return this.http.get(url)
         .toPromise()
         .then((response) => {
